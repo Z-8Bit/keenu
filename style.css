@@ -9,8 +9,15 @@ body{
     background:linear-gradient(135deg,#edc8c8,#e6e6e6);
 }
 
-.home-page{
+/*.home-page{
     background: linear-gradient(135deg,#c8e8ff,#f5e1ff);
+}*/
+
+.home-page{
+    background-image: url("eh/3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 nav{
@@ -107,7 +114,7 @@ nav a:hover{
 .side-text2{
     position:absolute;
 
-    left:1150px;
+    left:1170px;
     top:5%;
 
 
@@ -218,17 +225,30 @@ nav a:hover{
 }
 
 .hero-text{
+    position:relative;
+    height:100vh;
+    width:100%;
+}
+
+.top-text{
+    position:absolute;
+    top:80px;
+    left:50%;
+    transform:translateX(-50%);
     text-align:center;
+    width:80%;
 }
-
-.hero-text h1{
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    margin:5px 0;
+.bottom-text{
+    position:absolute;
+    bottom:120px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    width:80%;
 }
 
 #playBtn{
-    margin-top:25px;
+    position:absolute;
+    top:50%;
+    left:42%;
 }
