@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gallery-page">
+
+<nav>
+<a href="index.html">HBD</a>
+<a href="about.html">Three Musketeers</a>
+<a href="gallery.html">M</a>
+</nav>
+
+<div class="container">
+
+<div class="collage">
+
+<img src="eh/km/1.jpeg" class="img1">
+<img src="eh/km/9.jpeg" class="img3">
+<img src="eh/km/3.jpeg" class="img4">
+<img src="eh/km/8.jpeg" class="img5">
+<img src="eh/km/5.jpeg" class="img6">
+<img src="eh/km/6.jpeg" class="img7">
+<img src="eh/km/7.jpeg" class="img8">
+<img src="eh/km/4.jpeg" class="img9">
+<img src="eh/km/2.jpeg" class="img10">
+<img src="eh/km/10.jpeg" class="img11">
+<img src="eh/km/11.jpg" class="img2">
+
+</div>
+
+</div>
+
+<div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<p class="side-text">If you fumble this I will beat you up :)</p>
+
+<script>
+
+const images = document.querySelectorAll(".collage img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const close = document.getElementById("close");
+
+images.forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+    });
+});
+
+close.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if(e.target !== lightboxImg){
+        lightbox.style.display = "none";
+    }
+});
+
+</script>
+
+</body>
+</html>
